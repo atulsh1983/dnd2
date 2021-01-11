@@ -4,12 +4,13 @@ import '../../App.css';
 import axios from "axios";
 import LeftPanel from "./LeftPanel";
 import RightPanel from "./RightPanel";
+import {initialJson} from "../../intiaJson";
 
 class DragUI extends React.Component{
 
 
     state={
-        "getFormFields": null ,
+        "getFormFields": initialJson ,
         "fieldSaved": null,
         "headerUI":"head1",
         "bodyUI":"body1",
@@ -24,17 +25,19 @@ class DragUI extends React.Component{
 
     componentDidMount(){
 
+        
+
         //https://run.mocky.io/v3/99759884-e9d2-40f2-b623-71360aaff5de
 
-        axios.get('https://run.mocky.io/v3/a0cd5d66-fb15-43bb-841d-dfdd209dd310')
-        .then(response=>{
-            this.setState({
-                getFormFields: response.data
-            })
-        })
-        .catch(error=>{
-            console.log(error);
-        });
+        // axios.get('https://run.mocky.io/v3/a0cd5d66-fb15-43bb-841d-dfdd209dd310')
+        // .then(response=>{
+        //     this.setState({
+        //         getFormFields: response.data
+        //     })
+        // })
+        // .catch(error=>{
+        //     console.log(error);
+        // });
 
         let headBlank, bodyBlank, footBlank;
 
