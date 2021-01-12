@@ -38,7 +38,7 @@
 .dispt{display: table;}
 .setequal{table-layout: fixed;}
 .disptc{display: table-cell;padding:10px; width: 33%;}
-.disptc1{display: table-cell;padding:10px;}
+.disptc1{display: table-cell;padding:10px;width:220px}
 .vmid{vertical-align: middle;}
 .vtop{vertical-align: top;}
 .vhid{visibility: hidden;}
@@ -46,6 +46,14 @@
  
 
 #mainCont, .setflex{display: flex;}
+.sethgt1{
+  height: 772px;
+  overflow-y: auto;
+}
+.setbox1{
+  overflow-x: auto;
+  width: 100%;
+}
 
 
 

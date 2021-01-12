@@ -68,9 +68,12 @@ export default class BodyOne extends React.Component{
 
 
         return(
-            <div  className="dispt bg2 fullw ">
-            {SectionOne}
-        </div>
+            <div className="setbox1">
+                 <div  className="dispt bg2 fullw ">
+                    {SectionOne}
+                </div>
+            </div>
+           
         )
     }
 }

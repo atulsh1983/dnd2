@@ -55,7 +55,7 @@ export default class LeftPanel extends React.Component{
         panelUI = <ul className="maintab">
             <li className={this.state.optionNum === "1" ? 'active' : ""}>
                 <div className="setTab" onClick={() => this.faqsHandler("1")}>Header Fields</div>
-				<div className="showField">
+				<div className="showField sethgt1">
                     <Droppable                         
                         droppableId="column_A">
                         {(provided, snapshot) => 
@@ -75,7 +75,7 @@ export default class LeftPanel extends React.Component{
             </li>
             <li className={this.state.optionNum === "2" ? 'active' : ""}>
                 <div className="setTab" onClick={() => this.faqsHandler("2")}>Body Fields</div>
-                <div className="showField">
+                <div className="showField sethgt1">
                         <Droppable                         
                             droppableId="column_B">
                             {(provided, snapshot) => 
@@ -95,7 +95,7 @@ export default class LeftPanel extends React.Component{
             </li>
             <li className={this.state.optionNum === "3" ? 'active' : ""}>
                 <div className="setTab" onClick={() => this.faqsHandler("3")}>Footer Fields</div>
-                <div className="showField">
+                <div className="showField sethgt1">
                 <Droppable                         
                             droppableId="column_C">
                             {(provided, snapshot) => 
