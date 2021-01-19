@@ -9,6 +9,7 @@ import {
 import './App.css';
 import DragUI from "./component/FlowTwo/DragUI";
 import PreviewOne from './component/FlowTwo/PreviewOne';
+import InvIntialize from "./component/invoiceGen/InvIntialize";
 
 
 
@@ -18,12 +19,12 @@ class App extends React.Component {
   render() {
     
     return (
-      <div>
-        
+      <div>        
           <Router>
           <Switch>
               <Route path="/" exact component={DragUI}/>
               <Route path="/Preview" component={PreviewOne}/>
+              <Route path="/InvGen" component={InvIntialize}/>
             </Switch>
           </Router>
         

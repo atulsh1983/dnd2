@@ -61,13 +61,33 @@ class DragUI extends React.Component{
                 {"bcolumn_2":[]},
                 {"bcolumn_3":[]},
                 {"bcolumn_4":[]},
-                {"bcolumn_5":[]}
+                {"bcolumn_5":[]},
+                {"bcolumn_6":[]},
+                {"bcolumn_7":[]},
+                {"bcolumn_8":[]},
+                {"bcolumn_9":[]},
+                {"bcolumn_10":[]},
+                {"bcolumn_11":[]},
+                {"bcolumn_12":[]},
+                {"bcolumn_13":[]},
+                {"bcolumn_14":[]},
+                {"bcolumn_15":[]},
+                {"bcolumn_16":[]},
+                {"bcolumn_17":[]},
+                {"bcolumn_18":[]},
+                {"bcolumn_19":[]},
+                {"bcolumn_20":[]},
+                {"bcolumn_21":[]},
+                {"bcolumn_22":[]}
+               
             ]
         }
 
         if(this.state.footerUI=='footer1')
         {
-            footBlank = [ {"fcolumn_0":[]}  ]
+            footBlank = [ 
+                {"fcolumn_0":[]}   
+            ]
         }
 
 

@@ -1,21 +1,104 @@
-.setbox{
+.setbox {
   display: flex;
 }
-.fullw{width: 100%;}
-.wid30p{width: 30%;}
-.wid70p{width: 70%;}
-.wid200{width: 200px;}
+
+.vmid {
+  vertical-align: middle;
+}
+
+.vtop {
+  vertical-align: top;
+}
+
+.vhid {
+  visibility: hidden;
+}
+
+.txtc {
+  text-align: center;
+}
+.brcollap{
+  border-collapse: collapse;
+}
+
+.fullw {
+  width: 100%;
+}
+
+.wid30p {
+  width: 30%;
+}
+.wid33p {
+  width: 33%;
+}
 
 
-.sethead{background-color: aliceblue;line-height: 39px;font-size: 23px;}
-.setemp{border: 1px dotted lightgrey;width:200px;border-radius: 2px;padding: 8px;margin-bottom: 8px;background-color: #eee;}
-.setm{align-items: baseline;}
-.setTab{padding-left: 15px; line-height: 50px;}
 
-.mt5{margin-top: 5px;}
-.m10{margin-top: 10px;}
+.wid70p {
+  width: 70%;
+}
+.widinp{
+  width: 76px;
+}
 
-.titlebar1{
+.wid200 {
+  width: 200px;
+}
+
+.wid215 {
+  width: 215px;
+}
+
+
+
+.sethead {
+  background-color: aliceblue;
+  line-height: 39px;
+  font-size: 23px;
+}
+
+.setemp {
+  border: 1px dotted lightgrey;
+  width: 200px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #eee;
+}
+
+.setm {
+  align-items: baseline;
+}
+
+.setTab {
+  padding-left: 15px;
+  line-height: 50px;
+}
+
+.p_a {
+  padding: 10px;
+}
+.p_b{
+  padding: 5px;
+}
+.m_a{
+  margin: 10px;
+}
+.m_b{
+  margin: 10px 0;
+}
+.pad1 {
+  padding: 10px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+
+.m10 {
+  margin-top: 10px;
+}
+
+.titlebar1 {
   line-height: 40px;
   text-align: center;
   background-color: cornflowerblue;
@@ -27,48 +110,94 @@
 
 
 
-.bg1{background-color: #f0f3f5;}
-.bg2{background-color: aliceblue;}
-
-.pad1{padding: 10px;}
-
-
-#formRender label{width: 100px;}
-
-.dispt{display: table;}
-.setequal{table-layout: fixed;}
-.disptc{display: table-cell;padding:10px; width: 33%;}
-.disptc1{display: table-cell;padding:10px;}
-.vmid{vertical-align: middle;}
-.vtop{vertical-align: top;}
-.vhid{visibility: hidden;}
-.txtc{text-align: center;} 
- 
-
-#mainCont, .setflex{display: flex;}
-
-
-
-.leftpanel{
-  margin: 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  width: 17%;
-  display: flex;
-  flex-direction: column; 
+.bg1 {
+  background-color: #f0f3f5;
 }
 
-.rightpanel{
+.bg2 {
+  background-color: aliceblue;
+}
+
+.brd1{
+  border: 1px solid #000;
+}
+
+
+
+
+#formRender label {
+  width: 100px;
+}
+
+.dispt {
+  display: table;
+}
+.dispCell{
+  display: table-cell;
+}
+
+.setequal {
+  table-layout: fixed;
+}
+
+.disptc {
+  display: table-cell;
+  padding: 10px;
+  width: 33%;
+}
+
+.disptc1 {
+  display: table-cell;
+  padding: 10px;
+  width: 220px
+}
+
+
+
+
+#mainCont,
+.setflex {
+  display: flex;
+}
+.fitCont{
+  width: fit-content;
+}
+.fldir{
+  flex-direction: row;
+}
+
+.sethgt1 {
+  height: 772px;
+  overflow-y: auto;
+}
+
+.setbox1 {
+  overflow-x: auto;
+  width: 100%;
+}
+
+
+
+.leftpanel {
   margin: 8px;
   border: 1px solid lightgrey;
   border-radius: 2px;
-  width: 80%;
+  width: 13%;
   display: flex;
   flex-direction: column;
-  padding:5px
 }
 
-.panelopt{
+.rightpanel {
+  margin: 8px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px
+}
+
+.panelopt {
   background-color: aliceblue;
   line-height: 40px;
   border-bottom: 1px solid #a9b3bb;
@@ -76,45 +205,57 @@
 
 
 
-.box{
+.box {
   border: 1px solid #eee;
   padding: 10px;
   margin-top: 10px;
   background-color: #fff;
 }
 
-.dnd-bg1{
+.dnd-bg1 {
   background-color: #2f3848;
 }
-.dnd-bg2{
+
+.dnd-bg2 {
   background-color: antiquewhite;
 }
 
-.dnd-p1{padding: 20px;}
-#leftDesign h2{
+.dnd-p1 {
+  padding: 20px;
+}
+
+#leftDesign h2 {
   color: #f0f3f5;
 }
 
-ul.maintab{
+ul.maintab {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-ul.maintab > li {
-  background-color:aliceblue;
+
+ul.maintab>li {
+  background-color: aliceblue;
   border-bottom: 1px solid #eee;
 }
-ul.maintab > li > div.showField {display:none}
-ul.maintab > li.active > div.showField {display: block;
-  background-color: #fff;
-  margin: 0;}
 
-
-/* .tab-content {
-  max-height: 0px;
-  overflow: hidden;
-  padding: 0;
-  transition: all 0.4s ease;
+ul.maintab>li>div.showField {
+  display: none
 }
 
- */
+ul.maintab>li.active>div.showField {
+  display: block;
+  background-color: #fff;
+  margin: 0;
+}
+.setcel1{
+    height:100px;
+    border:1px solid #fff;
+    width:70px
+ }
+
+ .scbrd2{border-top: 1px solid #000;}
+
+ 
+
+

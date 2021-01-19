@@ -19,7 +19,7 @@ export default class RightPanel extends React.Component{
     }
 
     render(){
-        // console.log("[render RightPanel");
+        //console.log("[render RightPanel");
         // console.log(this.props);
 
         const { headerUI, headerSection, footerUI, footerSection, bodyUI, bodySection} = this.props;

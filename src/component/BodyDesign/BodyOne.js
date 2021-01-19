@@ -28,35 +28,64 @@ export default class BodyOne extends React.Component{
         
         const {body} = this.props;
 
-        let SectionOne ;
+        let SectionOne , SectionTwo;
 
         if(body)
         {
-                SectionOne = body.map((val,index)=>{
-               
-                
-                    let newID = "bcolumn_"+(index);                
-                    return(
-                            <div key={index} className="disptc1 vtop">
-                                <Droppable                         
-                                    droppableId={newID}>
-                                    {(provided, snapshot) => 
-                                        <TaskList
-                                        ref={provided.innerRef}
-                                        {...provided.droppableProps}
-                                        isDraggingOver={snapshot.isDraggingOver}
-                                        >
-                                            {val[newID].map((task, index) => (
-                                                <FieldsName keyid={task.id} key={task.id} val={task.label} index={index} />
-                                            ))}
-                                        {provided.placeholder}
-                                        </TaskList>
-                                    }
-                                </Droppable>
-                            </div>
-                    );
-                
-            });
+                SectionOne = body.map((val,index)=>{               
+                    if(index<22)
+                    {
+                        let newID = "bcolumn_"+(index);                
+                        return(
+                                <div key={index} className="m_a wid215 fldir">
+                                    <Droppable                         
+                                        droppableId={newID}>
+                                        {(provided, snapshot) => 
+                                            <TaskList
+                                            ref={provided.innerRef}
+                                            {...provided.droppableProps}
+                                            isDraggingOver={snapshot.isDraggingOver}
+                                            >
+                                                {val[newID].map((task, index) => (
+                                                    <FieldsName keyid={task.id} key={task.id} val={task.label} index={index} />
+                                                ))}
+                                            {provided.placeholder}
+                                            </TaskList>
+                                        }
+                                    </Droppable>
+                                </div>
+                        );
+                    }
+                });
+
+                SectionTwo = body.map((val,index)=>{               
+                    if(index>21)
+                    {
+                        //console.log(val);
+                        let newID = "bcolumn_"+(index);                
+                        return(
+                                <div key={index} className="m_a fldir">
+                                    <Droppable                         
+                                        droppableId={newID}>
+                                        {(provided, snapshot) => 
+                                            <TaskList
+                                            ref={provided.innerRef}
+                                            {...provided.droppableProps}
+                                            isDraggingOver={snapshot.isDraggingOver}
+                                            >
+                                                {val[newID].map((task, index) => (
+                                                    <FieldsName keyid={task.id} key={task.id} val={task.label} index={index} />
+                                                ))}
+                                            {provided.placeholder}
+                                            </TaskList>
+                                        }
+                                    </Droppable>
+                                </div>
+                        );
+                    }
+                });
+
+
 
             
              
@@ -68,9 +97,18 @@ export default class BodyOne extends React.Component{
 
 
         return(
-            <div  className="dispt bg2 fullw ">
-            {SectionOne}
-        </div>
+            <div className="bg2">
+                 <div className="setbox1">
+                    <div className="setflex fitCont">
+                        {SectionOne}
+                    </div>
+                </div>
+                <div className="p_a">
+                    {SectionTwo}
+                </div>
+            </div>
+           
+           
         )
     }
 }
