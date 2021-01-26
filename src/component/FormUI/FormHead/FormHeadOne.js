@@ -66,7 +66,7 @@ export default class FormOne extends React.Component{
                 leftCol1 = headerSection[0]['column_0'].map((val,index)=>{              
                     let label, field = null;
                     
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                                 <input 
                                     type="text" 
                                     name={val.id+"_label"} 
@@ -74,11 +74,12 @@ export default class FormOne extends React.Component{
                                     onChange={e => this.onTodoChange(e.target.value)}
                                     data-id={val.id}
                                     data-grp='0'
+                                    className="fp2_DIG"
                                    
                                     />
                             </div>
                    
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">
@@ -94,7 +95,7 @@ export default class FormOne extends React.Component{
                 midCol1 = headerSection[1]['column_1'].map((val,index)=>{              
                     let label, field = null;
                     
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                                 <input 
                                     type="text" 
                                     name={val.id+"_label"} 
@@ -102,10 +103,11 @@ export default class FormOne extends React.Component{
                                     onChange={e => this.onTodoChange(e.target.value)}
                                     data-id={val.id}
                                     data-grp='1'
+                                    className="fp2_DIG"
                                     />
                             </div>;
                    
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">
@@ -121,7 +123,7 @@ export default class FormOne extends React.Component{
                 rightCol1 = headerSection[2]['column_2'].map((val,index)=>{              
                     let label, field = null;
                     
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                     <input 
                         type="text" 
                         name={val.id+"_label"} 
@@ -129,10 +131,11 @@ export default class FormOne extends React.Component{
                         onChange={e => this.onTodoChange(e.target.value)}
                         data-id={val.id}
                         data-grp='2'
+                        className="fp2_DIG"
                         />
                 </div>;
                    
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">
@@ -147,7 +150,7 @@ export default class FormOne extends React.Component{
                
                 leftCol2 = headerSection[3]['column_3'].map((val,index)=>{              
                     let label, field = null;
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                     <input 
                         type="text" 
                         name={val.id+"_label"} 
@@ -155,10 +158,11 @@ export default class FormOne extends React.Component{
                         onChange={e => this.onTodoChange(e.target.value)}
                         data-id={val.id}
                         data-grp='3'
+                        className="fp2_DIG"
                        />
                 </div>;
                     
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">
@@ -174,7 +178,7 @@ export default class FormOne extends React.Component{
                 midCol2 = headerSection[4]['column_4'].map((val,index)=>{              
                     let label, field = null;
                     
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                                 <input 
                                     type="text" 
                                     name={val.id+"_label"} 
@@ -182,10 +186,11 @@ export default class FormOne extends React.Component{
                                     onChange={e => this.onTodoChange(e.target.value)}
                                     data-id={val.id}
                                     data-grp='4'
+                                    className="fp2_DIG"
                                    />
                             </div>;
                     
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">
@@ -201,7 +206,7 @@ export default class FormOne extends React.Component{
                 rightCol2 = headerSection[5]['column_5'].map((val,index)=>{              
                     let label, field = null;
                   
-                    label = <div className="wid200">
+                    label = <div className="wid200 mr_10">
                                 <input 
                                     type="text" 
                                     name={val.id+"_label"} 
@@ -209,10 +214,11 @@ export default class FormOne extends React.Component{
                                     onChange={e => this.onTodoChange(e.target.value)}
                                     data-id={val.id}
                                     data-grp='5'
+                                    className="fp2_DIG"
                                    />
                             </div>;
                    
-                    field = <input type="text" name={val.id} disabled/>  
+                    field = <input type="text" name={val.id} className="fp1_DIG wid200" disabled/>  
                     
                     return(
                         <div key={val.id} className="setbox pad1">

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import {DragDropContext} from 'react-beautiful-dnd';
 import '../../App.css';
 import axios from "axios";
 import LeftPanel from "./LeftPanel";
-import RightPanel from "./RightPanel";
+//import RightPanel from "./RightPanel";
+const RightPanel = React.lazy(()=>import("./RightPanel"))
 import {initialJson} from "../../intiaJson";
 
 class DragUI extends React.Component{
@@ -27,17 +28,6 @@ class DragUI extends React.Component{
 
         
 
-        //https://run.mocky.io/v3/99759884-e9d2-40f2-b623-71360aaff5de
-
-        // axios.get('https://run.mocky.io/v3/a0cd5d66-fb15-43bb-841d-dfdd209dd310')
-        // .then(response=>{
-        //     this.setState({
-        //         getFormFields: response.data
-        //     })
-        // })
-        // .catch(error=>{
-        //     console.log(error);
-        // });
 
         let headBlank, bodyBlank, footBlank;
 
@@ -107,11 +97,7 @@ class DragUI extends React.Component{
         const {destination, source, draggableId } = result;
        
 
-        // console.log("DragEnd--->");
-        // console.log("[Destination}",destination);
-        // console.log("[Source]", source);
-        // console.log("[Draggableid]",draggableId);
-
+     
         let section;
 
             if(source.droppableId==='column_A')
@@ -201,44 +187,28 @@ class DragUI extends React.Component{
                 }                           
             }
 
-            //console.log("[sourceIndex]", sourceIndex);
+          
 
             valueObj_2 = b[sourceIndex][source.droppableId][source.index];  
             b[sourceIndex][source.droppableId].splice(source.index, 1);
 
 
-            // console.log("[b]");
-            // console.log(b);
-            // console.log(valueObj_2);            
-            //let newOrder_2 = Array.from(this.state.getFormFields.LayoutOne.headerField);
-
+        
             
 
             newOrder_2.splice(destination.index, 0,valueObj_2);
 
-            //console.log("newOrder_2");
-            //console.log(newOrder_2);
-
+          
             let newState_2 = {
                 ...this.state.getFormFields,
                 [secname]:newOrder_2
             }
 
-            // let newState_2 = {
-            //     ...this.state.getFormFields,
-            //     LayoutOne:{
-            //         ...this.state.getFormFields.LayoutOne,
-            //         headerField: newOrder_2
-            //     }
-            // }
-
-            //console.log(newState_2);
-            
-
+           
           
             
 
-            // //----update the state with new values----
+            //----update the state with new values----
             if(secname=="header")
             {
                 this.setState({
@@ -458,13 +428,15 @@ class DragUI extends React.Component{
             setUILeft = <div id="mainCont">
                             <DragDropContext onDragEnd={this.onDragEnd}>
                                 <LeftPanel dataValues={getFormFields}/>
-                                <RightPanel 
-                                    headerUI={headerUI} 
-                                    bodyUI={bodyUI}
-                                    footerUI={footerUI}
-                                    headerSection={headerSection}
-                                    bodySection={bodySection}
-                                    footerSection={footerSection}/>
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    <RightPanel 
+                                        headerUI={headerUI} 
+                                        bodyUI={bodyUI}
+                                        footerUI={footerUI}
+                                        headerSection={headerSection}
+                                        bodySection={bodySection}
+                                        footerSection={footerSection}/>
+                                </Suspense>
                             </DragDropContext>
                         </div>
         }

@@ -65,12 +65,12 @@ export default class FormBodyOne extends React.Component{
                     let idv= val["bcolumn_"+index][0]["id"];
                     
                     return(
-                        <td key={index} >
+                        <td key={index} className="setbg2 setg3 setbg2" >
                             <input 
                                 type="text" 
                                 name={value}  
                                 defaultValue={label} 
-                                className="widinp"
+                                className="widinp fp2_DIG"
                                 data-grp={index}
                                 data-id={idv}
                                 data-caty="bodyTop" />
@@ -83,7 +83,7 @@ export default class FormBodyOne extends React.Component{
                 if(index<(valuesPrint.length-1) && val["bcolumn_"+index][0])
                 {   
                     return(
-                        <td key={index} className="setcel1 txtc" >
+                        <td key={index} className="setcel1 txtc setg3 setbg2" >
                             -
                         </td>
                     )
@@ -106,13 +106,13 @@ export default class FormBodyOne extends React.Component{
                                 {
                                   
                                     return(
-                                        <td key={i} className="setcel1 txtc" >
+                                        <td key={i} className="setcel1 txtc setg3 setbg2" >
                                            <input 
                                                 type="text" 
                                                 name={inpVal} 
                                                 id={idv}  
                                                 defaultValue={inpVal} 
-                                                className="wid70p"
+                                                className="wid70p fp2_DIG"
                                                 data-caty="bodyBottom" />
                                         </td>
                                     )
@@ -120,7 +120,7 @@ export default class FormBodyOne extends React.Component{
                                 else
                                 {
                                     return(
-                                        <td key={i} className="setcel1 txtc" >
+                                        <td key={i} className="setcel1 txtc setg3 setbg2" >
                                             -
                                         </td>
                                     )
@@ -171,11 +171,11 @@ export default class FormBodyOne extends React.Component{
 
         return(
              <div className="mt5 bg1 fullw">                    
-                    <table className="brcollap" cellPadding="0" cellSpacing="0">
+                    <table className="brcollap" cellPadding="0" cellSpacing="0" className="setbg2 setg1">
                         <tbody>
                             <tr>
-                                <td>
-                                    <table className="fullw" cellPadding="0" cellSpacing="0" id="borderTop">
+                                <td className="setbg2 setg3 p_c">
+                                    <table className="fullw setbg2 setg1" cellPadding="0" cellSpacing="0" id="borderTop">
                                         <tbody>
                                             <tr>
                                                 {header}
@@ -186,8 +186,8 @@ export default class FormBodyOne extends React.Component{
                                
                             </tr>
                             <tr>
-                                <td>
-                                    <table className="fullw" cellPadding="0" cellSpacing="0">
+                               <td className="setbg2 setg3 p_c">
+                                    <table className="fullw setg1 setbg2" cellPadding="0" cellSpacing="0">
                                     <tbody>
                                         <tr>
                                             {generateblank}
@@ -197,8 +197,8 @@ export default class FormBodyOne extends React.Component{
                                 </td>                               
                             </tr>
                             <tr>
-                                <td>
-                                    <table className="fullw" cellPadding="0" cellSpacing="0" id="borderBottom">
+                                <td className="setbg2 setg3 p_c">
+                                    <table className="fullw setg1 setbg2" cellPadding="0" cellSpacing="0" id="borderBottom">
                                         <tbody>
                                            
                                                 {lastgrpUI}

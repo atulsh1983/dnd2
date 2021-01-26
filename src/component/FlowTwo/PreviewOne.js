@@ -2,6 +2,7 @@ import React from "react";
 import FormHeadOne from "../FormUI/FormHead/FormHeadOne";
 import FormBodyOne from "../FormUI/FormBody/FormBodyOne";
 import FormFooterOne from "../FormUI/FormFooter/FormFooterOne";
+import axios from 'axios';
 
 
 
@@ -95,8 +96,40 @@ export default class Preview extends React.Component{
 
 
 
-       console.log("final Object");
-       console.log(objSaved);
+       console.log("final Object  133");
+       //console.log(objSaved);
+
+       let finalformD = {};
+
+       Object.assign(finalformD, {name: "Invoice1"});
+       Object.assign(finalformD, {structure: objSaved});
+
+       console.log(finalformD);
+
+       //let temp =  JSON.stringify(finalformD);
+
+       //console.log(temp);
+
+       let headers = {
+        'Content-Type': 'application/json'        
+      };
+
+
+    //    axios({
+    //     method: 'post',
+    //     url: '/invoiceforms/saveInvoiceFormat',
+    //     data:finalformD,
+    //   },{headers})
+    //   .then((response) => {
+    //       console.log("success");
+    //     console.log(response);
+    //   }, (error) => {
+    //       console.log("error");
+    //     console.log(error);
+    //   });
+
+
+
 
        
        
@@ -114,27 +147,27 @@ export default class Preview extends React.Component{
 
         //console.log(this.props.location.currentState);
 
-       //const {headerSection, headerUI, bodySection, bodyUI, footerSection, footerUI} = this.props.location.currentState;
+       const {headerSection, headerUI, bodySection, bodyUI, footerSection, footerUI} = this.props.location.currentState;
 
-        // if(headerUI=='head1')
-        // {
-        //     printHead = <FormHeadOne headerSection={headerSection}/>
-        // }
-        // if(bodyUI=='body1')
-        // {
-        //     printBody = <FormBodyOne bodySection={bodySection}/>
-        // }
-        // if(footerUI=="footer1")
-        // {
-        //     printFooter = <FormFooterOne footerSection={footerSection}/>
-        // }
-        printHead = <FormHeadOne/>
-        printBody = <FormBodyOne/>
-        printFooter = <FormFooterOne/>
+        if(headerUI=='head1')
+        {
+            printHead = <FormHeadOne headerSection={headerSection}/>
+        }
+        if(bodyUI=='body1')
+        {
+            printBody = <FormBodyOne bodySection={bodySection}/>
+        }
+        if(footerUI=="footer1")
+        {
+            printFooter = <FormFooterOne footerSection={footerSection}/>
+        }
+        // printHead = <FormHeadOne/>
+        // printBody = <FormBodyOne/>
+        // printFooter = <FormFooterOne/>
         
         
         return(
-            <div>
+            <div id="PreviewDIG" className="f12">
                {printHead}
                {printBody}
                {printFooter}
